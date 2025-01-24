@@ -1,8 +1,5 @@
 ﻿using PhoneAssistantConsole.CRUD;
 
-
-
-
 var contactService = new ContactService();
 
 while (true)
