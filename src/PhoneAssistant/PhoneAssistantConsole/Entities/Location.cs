@@ -1,6 +1,6 @@
 ﻿namespace PhoneAssistantConsole.Entities
 {
-    internal class Location
+    public class Location
     {
     }
 }
