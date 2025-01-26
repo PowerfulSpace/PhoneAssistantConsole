@@ -22,7 +22,9 @@ while (true)
             var name = Console.ReadLine();
             Console.Write("Введите номер телефона: ");
             var phoneNumber = Console.ReadLine();
-            contactService.AddContact(name, phoneNumber);
+            Console.Write("Введите почту: ");
+            var email = Console.ReadLine();
+            contactService.AddContact(name, phoneNumber, email);
             break;
 
         case "2":
@@ -38,7 +40,9 @@ while (true)
             var newName = Console.ReadLine();
             Console.Write("Введите новый номер телефона: ");
             var newPhoneNumber = Console.ReadLine();
-            contactService.UpdateContact(idToUpdate, newName, newPhoneNumber);
+            Console.Write("Введите почту: ");
+            var newEmail = Console.ReadLine();
+            contactService.UpdateContact(idToUpdate, newName, newPhoneNumber, newEmail);
             break;
 
         case "4":
@@ -64,7 +68,7 @@ while (true)
             {
                 foreach (var contact in allContacts)
                 {
-                    Console.WriteLine($"Id: {contact.Id}, Имя: {contact.Name}, Телефон: {contact.PhoneNumber}");
+                    Console.WriteLine($"Id: {contact.Id}, Имя: {contact.Name}, Телефон: {contact.PhoneNumber}, Email: {contact.Email}");
                 }
             }
             else

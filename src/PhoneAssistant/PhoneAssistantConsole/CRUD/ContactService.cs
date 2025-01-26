@@ -5,10 +5,10 @@ namespace PhoneAssistantConsole.CRUD
 {
     public class ContactService
     {
-        public void AddContact(string name, string phoneNumber)
+        public void AddContact(string name, string phoneNumber, string email)
         {
             using var db = new PhoneBookContext();
-            var contact = new Contact { Name = name, PhoneNumber = phoneNumber };
+            var contact = new Contact { Name = name, PhoneNumber = phoneNumber, Email = email };
             db.Contacts.Add(contact);
             db.SaveChanges();
             Console.WriteLine("Контакт успешно добавлен.");
@@ -30,7 +30,7 @@ namespace PhoneAssistantConsole.CRUD
             }
         }
 
-        public void UpdateContact(int id, string newName, string newPhoneNumber)
+        public void UpdateContact(int id, string newName, string newPhoneNumber, string newEmail)
         {
             using var db = new PhoneBookContext();
             var contact = db.Contacts.Find(id);
@@ -38,6 +38,7 @@ namespace PhoneAssistantConsole.CRUD
             {
                 contact.Name = newName;
                 contact.PhoneNumber = newPhoneNumber;
+                contact.Email = newEmail;
                 db.SaveChanges();
                 Console.WriteLine("Контакт успешно обновлён.");
             }
@@ -51,7 +52,7 @@ namespace PhoneAssistantConsole.CRUD
         {
             using var db = new PhoneBookContext();
             return db.Contacts
-                     .Where(c => c.Name.Contains(query))
+                     .Where(c => c.Name.Contains(query) || c.Email.Contains(query))
                      .ToList();
         }
 
