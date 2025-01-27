@@ -13,3 +13,6 @@ namespace PhoneAssistantConsole.Context
         }
     }
 }
+
+//Внести изенения для новой ветки
+//Изменить базу данных, и его схему. Т.к отсутствует Email
