@@ -8,5 +8,3 @@
         public string Email { get; set; } = null!;
     }
 }
-
-//Добавлен комментарий 1
