@@ -9,7 +9,8 @@ namespace PhoneAssistantConsole.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-F9SMEKT;Database=PhoneAssistantConsole_Db;Trusted_Connection=True;TrustServerCertificate=True");
+            //optionsBuilder.UseSqlServer("Server=DESKTOP-F9SMEKT;Database=PhoneAssistantConsole_Db;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-F9SMEKT;Database=PhoneAssistantConsole_Db_Test;Trusted_Connection=True;TrustServerCertificate=True");
         }
     }
 }
