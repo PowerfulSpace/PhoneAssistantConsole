@@ -8,7 +8,7 @@ namespace PhoneAssistantConsole.CRUD
         public void AddContact(string name, string phoneNumber, string email)
         {
             using var db = new PhoneBookContext();
-            var contact = new Contact { Name = name, PhoneNumber = phoneNumber, Email = email };
+            var contact = new Contact { Name = name, PhoneNumber = phoneNumber};
             db.Contacts.Add(contact);
             db.SaveChanges();
             Console.WriteLine("Контакт успешно добавлен.");
@@ -38,7 +38,6 @@ namespace PhoneAssistantConsole.CRUD
             {
                 contact.Name = newName;
                 contact.PhoneNumber = newPhoneNumber;
-                contact.Email = newEmail;
                 db.SaveChanges();
                 Console.WriteLine("Контакт успешно обновлён.");
             }
@@ -52,7 +51,7 @@ namespace PhoneAssistantConsole.CRUD
         {
             using var db = new PhoneBookContext();
             return db.Contacts
-                     .Where(c => c.Name.Contains(query) || c.Email.Contains(query))
+                     .Where(c => c.Name.Contains(query))
                      .ToList();
         }
 

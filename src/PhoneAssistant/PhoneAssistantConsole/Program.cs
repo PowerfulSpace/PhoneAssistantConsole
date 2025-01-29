@@ -68,7 +68,7 @@ while (true)
             {
                 foreach (var contact in allContacts)
                 {
-                    Console.WriteLine($"Id: {contact.Id}, Имя: {contact.Name}, Телефон: {contact.PhoneNumber}, Email: {contact.Email}");
+                    Console.WriteLine($"Id: {contact.Id}, Имя: {contact.Name}, Телефон: {contact.PhoneNumber}");
                 }
             }
             else
