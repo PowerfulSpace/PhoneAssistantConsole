@@ -7,5 +7,6 @@
         public string PhoneNumber { get; set; } = null!;
         public string Email { get; set; } = null!;
         public string Description { get; set; } = null!;
+        public Guid LocationId { get; set; }
     }
 }
