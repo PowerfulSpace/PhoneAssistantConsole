@@ -5,7 +5,7 @@ namespace PhoneAssistantConsole.CRUD
 {
     public class ContactService
     {
-        public void AddContact(string name, string phoneNumber, string email)
+        public void AddContact(string name, string phoneNumber)
         {
             using var db = new PhoneBookContext();
             var contact = new Contact { Name = name, PhoneNumber = phoneNumber};
@@ -30,7 +30,7 @@ namespace PhoneAssistantConsole.CRUD
             }
         }
 
-        public void UpdateContact(int id, string newName, string newPhoneNumber, string newEmail)
+        public void UpdateContact(int id, string newName, string newPhoneNumber)
         {
             using var db = new PhoneBookContext();
             var contact = db.Contacts.Find(id);

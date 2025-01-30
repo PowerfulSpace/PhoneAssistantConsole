@@ -22,9 +22,7 @@ while (true)
             var name = Console.ReadLine();
             Console.Write("Введите номер телефона: ");
             var phoneNumber = Console.ReadLine();
-            Console.Write("Введите почту: ");
-            var email = Console.ReadLine();
-            contactService.AddContact(name, phoneNumber, email);
+            contactService.AddContact(name, phoneNumber);
             break;
 
         case "2":
@@ -40,9 +38,7 @@ while (true)
             var newName = Console.ReadLine();
             Console.Write("Введите новый номер телефона: ");
             var newPhoneNumber = Console.ReadLine();
-            Console.Write("Введите почту: ");
-            var newEmail = Console.ReadLine();
-            contactService.UpdateContact(idToUpdate, newName, newPhoneNumber, newEmail);
+            contactService.UpdateContact(idToUpdate, newName, newPhoneNumber);
             break;
 
         case "4":
