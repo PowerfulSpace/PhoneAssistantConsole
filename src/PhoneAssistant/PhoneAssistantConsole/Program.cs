@@ -22,7 +22,7 @@ while (true)
             var name = Console.ReadLine();
             Console.Write("Введите номер телефона: ");
             var phoneNumber = Console.ReadLine();
-            contactService.AddContact(name, phoneNumber);
+            contactService.AddContact(name!, phoneNumber);
             break;
 
         case "2":
