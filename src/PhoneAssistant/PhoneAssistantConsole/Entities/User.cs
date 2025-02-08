@@ -7,3 +7,4 @@
         public string LastName { get; set; } = null!;
     }
 }
+//Добавить миграцию
