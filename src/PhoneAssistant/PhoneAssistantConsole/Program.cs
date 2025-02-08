@@ -44,7 +44,7 @@ while (true)
         case "4":
             Console.Write("Введите имя или часть имени для поиска: ");
             var query = Console.ReadLine();
-            var results = contactService.SearchContacts(query);
+            var results = contactService.SearchContacts(query!);
             if (results.Any())
             {
                 foreach (var contact in results)
