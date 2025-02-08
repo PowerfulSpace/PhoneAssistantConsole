@@ -38,7 +38,7 @@ while (true)
             var newName = Console.ReadLine();
             Console.Write("Введите новый номер телефона: ");
             var newPhoneNumber = Console.ReadLine();
-            contactService.UpdateContact(idToUpdate, newName!, newPhoneNumber);
+            contactService.UpdateContact(idToUpdate, newName!, newPhoneNumber!);
             break;
 
         case "4":
