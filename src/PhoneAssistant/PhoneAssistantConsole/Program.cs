@@ -78,8 +78,5 @@ while (true)
             Console.WriteLine("Выход.");
             return;
 
-        default:
-            Console.WriteLine("Неверный выбор.");
-            break;
     }
 }
