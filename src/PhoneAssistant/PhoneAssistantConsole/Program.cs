@@ -40,19 +40,6 @@ while (true)
             var newPhoneNumber = Console.ReadLine();
             contactService.UpdateContact(idToUpdate, newName!, newPhoneNumber!);
             break;
-
-        case "4":
-            Console.Write("Введите имя или часть имени для поиска: ");
-            var query = Console.ReadLine();
-            var results = contactService.SearchContacts(query!);
-            if (results.Any())
-            {
-                foreach (var contact in results)
-                {
-                    Console.WriteLine($"Id: {contact.Id}, Имя: {contact.Name}, Телефон: {contact.PhoneNumber}, Email: {contact.Description}");
-
-                }
-            }
             else
             {
                 Console.WriteLine("Контакты не найдены.");
@@ -78,5 +65,8 @@ while (true)
             Console.WriteLine("Выход.");
             return;
 
+        default:
+            Console.WriteLine("Неверный выбор.");
+            break;
     }
 }
